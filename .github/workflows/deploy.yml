@@ -12,7 +12,7 @@ jobs:
     - name: Deploy to Hosting with rsync
       uses: burnett01/rsync-deployments@6.0.0
       with:
-        switches: -ravzuptP --delete --exclude .git .github
+        switches: -ravzuptP --delete --exclude .git .github imagens
         path: ./
         remote_path: ${{ secrets.REMOTE_TARGET }}
         remote_host: ${{ secrets.REMOTE_HOST }}
